@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gapanovich — Каталог</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg: #faf9f7;
+      --color-text: #1a1a1a;
+      --color-accent: #b8a89a;
+      --font-main: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    /* ── Шапка ── */
+    header {
+      text-align: center;
+      padding: clamp(28px, 5vw, 56px) clamp(16px, 5vw, 40px) clamp(16px, 3vw, 32px);
+    }
+
+    .brand {
+      font-size: clamp(11px, 2vw, 14px);
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .divider {
+      width: clamp(40px, 8vw, 70px);
+      height: 1px;
+      background: var(--color-accent);
+      opacity: 0.6;
+      margin: 14px auto;
+    }
+
+    h1 {
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    /* ── Сетка галереи ── */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(16px, 2.4vw, 32px);
+      padding: clamp(16px, 3vw, 48px) clamp(12px, 5vw, 80px);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* 2 колонки на мобильных */
+    @media (max-width: 700px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 12px;
+      }
+    }
+
+    /* ── Карточка ── */
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .card .photo-frame {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    .card .caption {
+      font-size: clamp(11px, 1.2vw, 14px);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--color-text);
+      line-height: 1.4;
+      text-align: center;
+      padding: 0 4px 4px;
+    }
+
+    @media (max-width: 700px) {
+      .card .caption {
+        font-size: 11px;
+      }
+    }
+
+    /* ── Подвал ── */
+    footer {
+      text-align: center;
+      padding: clamp(20px, 4vw, 48px);
+      opacity: 0.4;
+    }
+
+    footer span {
+      font-size: clamp(9px, 1.5vw, 11px);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="divider"></div>
+    <h1>Каталог</h1>
+  </header>
+
+  <div class="gallery">
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_01.jpg" alt="Блейзер и шорты, Рубашка" loading="lazy"></div>
+      <p class="caption">Блейзер и шорты, Рубашка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_02.jpg" alt="Блузон" loading="lazy"></div>
+      <p class="caption">Блузон</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_03.jpg" alt="Бомбер" loading="lazy"></div>
+      <p class="caption">Бомбер</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_04.jpg" alt="Брюки и Пышная юбка" loading="lazy"></div>
+      <p class="caption">Брюки и Пышная юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_05.jpg" alt="Буза и Юбка" loading="lazy"></div>
+      <p class="caption">Буза и Юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_06.jpg" alt="Кардиган сливочный и Трусы" loading="lazy"></div>
+      <p class="caption">Кардиган сливочный и Трусы</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_07.jpg" alt="Кардиган и Юбка" loading="lazy"></div>
+      <p class="caption">Кардиган и Юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_08.jpg" alt="Кейп и Боди" loading="lazy"></div>
+      <p class="caption">Кейп и Боди</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_09.jpg" alt="Куртка и шорты" loading="lazy"></div>
+      <p class="caption">Куртка и шорты</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_10.jpg" alt="Куртка и Юбка-пачка" loading="lazy"></div>
+      <p class="caption">Куртка и Юбка-пачка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_11.jpg" alt="Лонгслив и Брюки" loading="lazy"></div>
+      <p class="caption">Лонгслив и Брюки</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_12.jpg" alt="Майка и Юбка" loading="lazy"></div>
+      <p class="caption">Майка и Юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_13.jpg" alt="Пальто и брюки" loading="lazy"></div>
+      <p class="caption">Пальто и брюки</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_14.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_15.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_16.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_17.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_18.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_19.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_20.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_21.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_22.jpg" alt="Платье" loading="lazy"></div>
+      <p class="caption">Платье</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_23.jpg" alt="Розовый кардиган и Трусы" loading="lazy"></div>
+      <p class="caption">Розовый кардиган и Трусы</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_24.jpg" alt="Рубашка и шорты" loading="lazy"></div>
+      <p class="caption">Рубашка и шорты</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_25.jpg" alt="Рубашка" loading="lazy"></div>
+      <p class="caption">Рубашка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_26.jpg" alt="Свитер" loading="lazy"></div>
+      <p class="caption">Свитер</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_27.jpg" alt="Топ и Юбка" loading="lazy"></div>
+      <p class="caption">Топ и Юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_28.jpeg" alt="Топ" loading="lazy"></div>
+      <p class="caption">Топ</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_29.jpg" alt="Топ и Юбка" loading="lazy"></div>
+      <p class="caption">Топ и Юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_30.jpg" alt="Футболка и Мини-юбка" loading="lazy"></div>
+      <p class="caption">Футболка и Мини-юбка</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_31.jpg" alt="Юбка и Топ" loading="lazy"></div>
+      <p class="caption">Юбка и Топ</p>
+    </div>
+
+    <div class="card">
+      <div class="photo-frame"><img src="photos/photo_32.jpg" alt="Юбка" loading="lazy"></div>
+      <p class="caption">Юбка</p>
+    </div>
+
+  </div>
+
+  <footer>
+  </footer>
+
+</body>
+</html>
