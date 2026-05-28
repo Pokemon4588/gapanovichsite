@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gapanovich — Описания</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg: #faf9f7;
+      --color-text: #1a1a1a;
+      --color-accent: #b8a89a;
+      --font-main: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: var(--color-bg);
+      color: var(--color-text);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: clamp(32px, 6vw, 72px) clamp(16px, 5vw, 48px);
+      display: flex;
+      flex-direction: column;
+      gap: clamp(40px, 7vw, 80px);
+    }
+
+    /* ── Блок: фото + текст ── */
+    .item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(24px, 4vw, 56px);
+      align-items: center;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .item .text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .item .text h2 {
+      font-size: clamp(17px, 2.2vw, 24px);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+    }
+
+    .item .text p {
+      font-size: clamp(15px, 1.5vw, 18px);
+      font-weight: 300;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+      color: #333;
+    }
+
+    /* ── Разделитель между блоками ── */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--color-accent);
+      opacity: 0.5;
+      margin: 0 auto;
+    }
+
+    /* ── Мобильная версия ── */
+    @media (max-width: 680px) {
+      .item {
+        gap: 10px;
+      }
+
+      .item .text h2 {
+        font-size: 13px;
+      }
+
+      .item .text p {
+        font-size: 12px;
+        line-height: 1.6;
+      }
+    }
+
+    /* ── Заголовок страницы ── */
+    .page-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: clamp(16px, 3vw, 32px);
+    }
+
+    .page-header .brand {
+      font-size: clamp(11px, 2vw, 14px);
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .page-header .header-divider {
+      width: clamp(40px, 8vw, 70px);
+      height: 1px;
+      background: var(--color-accent);
+      opacity: 0.6;
+    }
+
+    .page-header h1 {
+      font-size: clamp(18px, 3vw, 26px);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+
+    <div class="page-header">
+      <p class="brand">Gapanovich</p>
+      <div class="header-divider"></div>
+      <h1>Коллекция «Предчувствие бала»</h1>
+    </div>
+
+    <!-- 2. Платье «Бал мечты» -->
+    <div class="item">
+      <img src="desc_photos/desc_05.jpg" alt="Платье «Бал мечты»" loading="lazy">
+      <div class="text">
+        <h2>Платье «Бал мечты»</h2>
+        <p>В платье из пудрово-розовой вуали, украшенном бантами на рукавах, накладными карманами на лифе и рюшами на горловине, вы почувствуете себя сказочной принцессой, принося за собой пышную, как юбка-солнце, торжественность, куда бы вы ни пришли. Полуприлегающий силуэт с отрезной линией акцентирует внимание окружающих на вашем изяществе, заставив завороженно оборачиваться вслед.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 3. Топ «Россыпь цветов» -->
+    <div class="item">
+      <img src="desc_photos/desc_03.jpg" alt="Топ «Россыпь цветов»" loading="lazy">
+      <div class="text">
+        <h2>Топ «Россыпь цветов»</h2>
+        <p>Белый хлопковый кант, оформляющий цветочную лужайку, раскинувшуюся на прозрачной сетке, придает топу очерченность и аккуратность, — те качества, которыми несомненно обладают элегантные принцессы большого города. Переливающиеся на свету стразы и бусины будут придавать кокетства вашему внешнему виду, превращая вас в цветочную фею посреди «скучной» обыденности.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 4. Блуза «Блестяшка» и юбка «Пышность» -->
+    <div class="item">
+      <img src="desc_photos/desc_04.jpg" alt="Блуза «Блестяшка» и юбка «Пышность»" loading="lazy">
+      <div class="text">
+        <h2>Блуза «Блестяшка» и юбка «Пышность»</h2>
+        <p>Завышенный пояс для статности и фатиновые подкладки для пышности, объединенные в изделие из белой хлопковой тафты, поражают своим изысканным кроем. Подол этой юбки воздушный и легкий; надевая ее, дополненную блестящей блузой, расшитой серебристой нитью, вы становитесь героиней современного французского романа, готовой к незабываемой истории любви.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 5. Платье «Нежный букет» -->
+    <div class="item">
+      <img src="desc_photos/desc_02.jpg" alt="Платье «Нежный букет»" loading="lazy">
+      <div class="text">
+        <h2>Платье «Нежный букет»</h2>
+        <p>Приталенный силуэт ярусного платья из жатой тафты впечатляет использованием материалов, форм и оттенков. Подобное букету, составленному по случаю выдающегося события, это многослойное чудо станет украшением любого вечера, восхищая шелковистостью и пышным объемом. В нем вас щедро одарят комплиментами и вы гарантированно станете центром цветочной композиции любого праздника.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
